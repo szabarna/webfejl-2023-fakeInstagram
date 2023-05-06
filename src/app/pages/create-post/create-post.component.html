@@ -1,0 +1,31 @@
+<div class="loginContainer">
+
+    <div class="formDiv">
+
+            <div class="loginForm">
+
+                <img src="{{ postPicture }}" alt="" (click)="fileInput.click()">
+                <input hidden (change)="onFileSelected()" #fileInput type="file" id="file">
+
+                <mat-form-field class="loginInput" >
+                    <textarea matInput
+                            
+                            [formControl]="description"
+                            >
+                    </textarea>
+                </mat-form-field>
+
+                
+          </div>
+
+        
+    </div>
+
+    <div class="buttonDiv">
+        <button (click)="onCreatePost()">Create Post</button>
+      </div>
+    
+</div>
+
+
+

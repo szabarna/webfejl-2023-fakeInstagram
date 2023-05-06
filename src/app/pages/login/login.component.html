@@ -1,0 +1,25 @@
+<div class="loginContainer">
+
+    <div class="formDiv">
+
+        <h1 class="loginH1">Login</h1>
+        <div class="loginForm" fxLayout="column" fxLayoutAlign="center center">
+
+            <mat-form-field class="loginInput">
+              <input type="email" name="email" required matInput placeholder="Email" [formControl]="email" >
+            </mat-form-field>
+
+            <mat-form-field class="loginInput">
+                <input type="password" name="password" matInput required placeholder="Password" [formControl]="password" >
+            </mat-form-field>
+        
+            <button (click)="onLogin()">Log in</button>
+          </div>
+        
+    </div>
+    <div class="signUpContainer">
+        <h2>Don't have an account?</h2>
+        <button (click)="toRegister()">Sign up</button>
+    </div>
+    
+</div>

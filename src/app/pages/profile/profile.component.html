@@ -1,0 +1,32 @@
+<div class="loginContainer">
+
+    <div class="formDiv">
+        <img src="{{ currentUser.userPicture }}" alt="" width="64px" height="64px">
+        <div class="nameDiv">
+            <h2>{{ currentUser.userName }}</h2>
+            <button (click)="onEditProfile()" >Edit profile</button>
+        </div>
+        
+    </div>
+
+    <div class="posts" >
+        <div class="postContainer" *ngFor="let post of currentExtendedPosts">
+            <div class="creatorInfo">
+                <img id="userPicture" src="{{ post.creator?.userPicture }}" alt="" width="64px" height="64px">
+                <h2> {{ post.creator?.userName }}</h2>
+                <button class="deleteButton" (click)="onDeletePost(post.postId)">Delete</button>
+            </div>
+            <img src="{{ post.imgString }}" alt="">
+            <div class="postInfoDiv">
+                <p>{{ post.description }}</p>
+                <div class="likesDiv">
+                    <h2 class="likesCount">{{ post.likesCount }}</h2>
+                    <mat-icon class="likedIcon" >favorite</mat-icon>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+</div>
+

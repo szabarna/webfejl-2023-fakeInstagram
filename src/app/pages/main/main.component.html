@@ -1,0 +1,22 @@
+
+<main class="mainContainer">
+    <div class="toolContainer">
+        <button mat-fab extended (click)="onCreatePost()" >Create post</button>
+    </div>
+
+    <div class="posts" >
+        <div class="postContainer" *ngFor="let post of currentExtendedPosts">
+            <div class="creatorInfo">
+                <img id="userPicture" src="{{ post.creator?.userPicture }}" alt="" width="64px" height="64px">
+                <h2> {{ post.creator?.userName }}</h2>
+                <h2 class="likesCount">{{ post.likesCount }}</h2>
+                <ng-container *ngIf="loggedInUser"> 
+                    <mat-icon (click)="onLike($event, post)" [ngClass]="{'likedIcon': post.likes.includes(loggedInUser!.uid) }" >favorite</mat-icon>
+                </ng-container>    
+            </div>
+            <img src="{{ post.imgString }}" alt="postImg">
+            <p class="description"><span class="userNameSpan">{{post.creator?.userName}}</span>{{ post.description }}</p>
+        </div>
+    </div>
+
+</main>

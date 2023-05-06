@@ -1,0 +1,20 @@
+<nav class="navBar" *ngIf="loggedInUser">
+   <ul class="navList">
+    <li id="iconLi" (click)="onHome()">
+      <img src="../ig_icon.png" alt="icon">
+      <h1 id="iconH1" >FakeInstagram</h1>
+      <mat-icon class="homeIcon" (click)="onHome()">home</mat-icon>
+    </li>
+    <li class="navLi" id="userInfoLi" (click)="onProfile()" >
+      <img src="{{ userInfo?.userPicture }}" alt="" width="64px" height="64px">
+      <h1>{{ userInfo?.userName }}</h1>
+      <mat-icon class="profileIcon">person</mat-icon>
+    </li>
+    <li class="navLi logOutLi">
+      <button class="logOutButton" (click)="onLogout()">Logout</button>
+      <mat-icon class="homeIcon" (click)="onLogout()">exit_to_app</mat-icon>
+    </li>
+   </ul>
+</nav>
+
+<router-outlet></router-outlet>

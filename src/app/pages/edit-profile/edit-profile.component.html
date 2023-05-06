@@ -1,0 +1,31 @@
+<div class="loginContainer">
+
+    <div class="formDiv">
+
+        <div class="loginForm" fxLayout="column" fxLayoutAlign="center center">
+
+            <img src="{{ userPicture }}" alt="" (click)="fileInput.click()">
+            <input hidden (change)="onFileSelected()" #fileInput type="file" id="file">
+
+            <mat-form-field class="loginInput">
+              <input type="email" matInput matRequired  placeholder="Email" [formControl]="email">
+            </mat-form-field>
+
+            <mat-form-field class="loginInput">
+                <input type="text" matInput required  placeholder="Full Name" [formControl]="fullName" >
+            </mat-form-field>
+
+            <mat-form-field class="loginInput">
+                <input type="text" matInput required  placeholder="Username" [formControl]="userName" >
+            </mat-form-field>
+
+            <button (click)="onUpdate()">Update</button>
+
+            <button class="deleteButton" (click)="onDelete()">Delete</button>
+          </div>
+        
+    </div>
+    
+</div>
+
+

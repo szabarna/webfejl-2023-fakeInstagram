@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Pacifico&family=Playfair+Display&family=Roboto:ital,wght@0,300;1,300&display=swap');
+.navBar {
+    display: grid;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    height: 5rem;
+    background-color: #101010;
+    justify-items: center;
+    color: white;
+    border-bottom: 2px solid #202020;
+    z-index: 2;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.navList {
+    display: grid;
+    width: 75%;
+    height: 100%;
+    background-color: transparent;
+    grid-template-columns: repeat(2, auto);
+    list-style: none;
+    justify-content: space-between;
+    align-items: center;
+
+    #userInfoLi {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 1rem;
+        border: 0px solid #202020;
+        padding: 0.5rem;
+        height: 100%;
+        align-items: center;
+        position: absolute;
+        justify-self: center;
+
+        img {
+            border-radius: 2rem;
+            
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: #202020;
+        }
+    }
+
+    #iconLi {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 1rem;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+
+    .logOutLi {
+        position: relative;
+        display: flex;
+        height: 100%;
+        align-items: center;
+        justify-content: flex-end;
+
+
+        button {
+            position: relative;
+            font-size: 1.35rem;
+            color: white;
+            background-color: transparent;
+            height: 100%;
+            border: 0px solid #303030;
+            padding: 0 2rem;
+            right: 0;
+           
+            &:hover {
+                cursor: pointer;
+                background-color: #303030;
+            }
+        }
+    }
+}
+
+#iconH1 {
+    font-size: 1.75rem;
+    font-weight: 100;
+    font-family: 'Playfair Display', sans-serif;
+}
+
+.homeIcon {
+    color: white;
+    display: none;
+}
+
+.profileIcon {
+    color: white;
+    display: none;
+}
+
+
+::ng-deep .loginInput .mdc-line-ripple {
+    display: none;
+}
+
+@media screen and (max-width: 860px) {
+
+    .homeIcon {
+        display: block;
+        border: 0px solid #303030;
+        padding: 0 2rem;
+           
+    }
+
+    .profileIcon {
+        display: block;
+        border: 0px solid #303030;
+        padding: 0 2rem;
+        color: white;
+           
+    }
+
+    .navLi {
+        display: grid;
+    }
+
+    .navBar {
+        bottom: 0;
+        top: auto;
+        position: fixed;
+    }
+
+    .navList {
+        width: 100vw;
+        justify-content:space-evenly;
+    }
+
+    .logOutButton {
+        display: none;
+    }
+
+    li {
+        height: 100%;
+        width: fit-content;
+        justify-content: center;
+        gap: 0 !important;
+        align-items: center;
+        padding: 0;
+
+        mat-icon {
+            width: fit-content;
+            height: fit-content;
+            font-size: 1.75rem;
+        }
+
+        &:hover {
+            cursor: pointer;
+            background-color: #303030;
+        }
+    }
+
+    #iconLi {
+        h1 {
+            display: none;
+        }
+        img {
+            display: none;
+        }
+
+       
+    }
+
+    #userInfoLi {
+        h1 {
+            display: none;
+        }
+        img {
+            display: none;
+        }
+
+
+    }
+    
+}
