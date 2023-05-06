@@ -1,1 +1,2 @@
 WEBFEJL-2023-FAKEINSTAGRAM GITHUB REPO
+FIRESTORE HOSTING URL: https://webfejl-2023-fakeinstagram.web.app
